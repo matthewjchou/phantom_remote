@@ -14,8 +14,8 @@ I used micropython instead of writing C++, but otherwise, this is extremely simi
 
 Couple quirks:
 1. The ESP32C3 has no onboard LED, so there is no blinking if something is broken, unfortunate
-2. The ESP32C3 has a very basic implementation of mDNS that allows for self advertisements, but does not implement Service Discovery. So the (mDNS library)[https://github.com/cbrand/micropython-mdns] I used uses the same port as the baked in mDNS implementation. That's a problem, so you can't use a prebuilt ESP32C3 firmware image, you have to build one yourself with mDNS disabled. There are more detailed instructions in that library READMEs
-3. The ESP32C3 doesn't support sofware timers, so to use the (IR Receiver library)[https://github.com/peterhinch/micropython_ir] I used, you have to disable the software timer.
+2. The ESP32C3 has a very basic implementation of mDNS that allows for self advertisements, but does not implement Service Discovery. So the [mDNS library](https://github.com/cbrand/micropython-mdns) I used uses the same port as the baked in mDNS implementation. That's a problem, so you can't use a prebuilt ESP32C3 firmware image, you have to build one yourself with mDNS disabled. There are more detailed instructions in that library READMEs
+3. The ESP32C3 doesn't support sofware timers, so to use the [IR Receiver library](https://github.com/peterhinch/micropython_ir) I used, you have to disable the software timer.
 
 If you were to say use a different board, some things would need to be tweaked.
 
